@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KMeans Clustering Visualization</title>
+    <link rel="stylesheet" href="static/style.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="static/script.js" defer></script>
+</head>
+<body>
+    <h1>KMeans Clustering Visualization</h1>
+
+    <label for="numClusters">Select number of clusters (k):</label>
+    <select id="numClusters">
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+    </select>
+
+    <label for="initMethod">Select initialization method:</label>
+    <select id="initMethod">
+        <option value="random">Random</option>
+        <option value="kmeans++">KMeans++</option>
+        <option value="farthest_first">Farthest First</option>
+        <option value="manual">Manual</option>
+    </select>
+
+    <button id="generateDataset">Generate New Dataset</button>
+    <button id="stepThrough">Step through KMeans</button>
+    <button id="runToConvergence">Run to Convergence</button>
+    <button id="resetAlgorithm">Reset Algorithm</button>
+
+    <div id="plot"></div>
+</body>
+</html>
